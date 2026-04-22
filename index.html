@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WestCoast Property | Agence Immobilière de Prestige</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="index.css">
+    <meta name="description" content="WestCoast Property - L’excellence immobilière au Bénin. Trouvez des propriétés de luxe, gérez vos biens et investissez sereinement.">
+</head>
+<body>
+    <div class="bg-noise"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">W</div>
+                <span class="logo-text">WestCoast</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <span class="nav-indicator" id="navIndicator"></span>
+
+                <li class="nav-item has-dropdown">
+                    <a href="#" class="nav-link active" data-nav>
+                        Services
+                        <i data-lucide="chevron-down" class="nav-chevron"></i>
+                    </a>
+                    <div class="nav-dropdown">
+                        <div class="dropdown-inner">
+                            <a href="#" class="dropdown-item">
+                                <div class="di-icon"><i data-lucide="home"></i></div>
+                                <div class="di-text">
+                                    <strong>Location</strong>
+                                    <span>Trouver votre logement idéal</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <div class="di-icon"><i data-lucide="tag"></i></div>
+                                <div class="di-text">
+                                    <strong>Vente</strong>
+                                    <span>Achetez ou mettez en vente</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <div class="di-icon"><i data-lucide="shield-check"></i></div>
+                                <div class="di-text">
+                                    <strong>Gestion</strong>
+                                    <span>Déléguez votre patrimoine</span>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <div class="di-icon"><i data-lucide="trending-up"></i></div>
+                                <div class="di-text">
+                                    <strong>Investissement</strong>
+                                    <span>Maximisez vos rendements</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-nav>Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-nav>Investissement</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-nav>Affiliation</a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-search-btn" id="navSearchBtn" aria-label="Rechercher">
+                    <i data-lucide="search"></i>
+                </button>
+                <a href="#" class="btn-ghost">Connexion</a>
+                <a href="#" class="btn-primary nav-cta">
+                    <span>S'inscrire</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Search Overlay -->
+        <div class="nav-search-overlay" id="navSearchOverlay">
+            <div class="nav-search-box">
+                <i data-lucide="search"></i>
+                <input type="text" placeholder="Rechercher une propriété, un quartier, une ville…" id="navSearchInput" autocomplete="off">
+                <button class="search-close-btn" id="searchCloseBtn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            <div class="search-suggestions">
+                <span class="suggestion-label">Tendances</span>
+                <a href="#" class="suggestion-tag">Villa Fidjrossè</a>
+                <a href="#" class="suggestion-tag">Penthouse Cotonou</a>
+                <a href="#" class="suggestion-tag">Appt. Haie Vive</a>
+                <a href="#" class="suggestion-tag">Résidence Porto-Novo</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-inner-container">
+                <div class="hero-content">
+
+                    <!-- Trust Badge with live cycling text -->
+                    <div class="trust-badge reveal">
+                        <div class="avatar-group">
+                            <div class="mini-avatar"></div>
+                            <div class="mini-avatar"></div>
+                            <div class="mini-avatar"></div>
+                        </div>
+                        <span class="live-anim-dot"></span>
+                        <div class="live-messages" id="liveMessages">
+                            <span class="live-msg active">+500 Propriétés de luxe gérées</span>
+                            <span class="live-msg">3 ventes conclues aujourd'hui</span>
+                            <span class="live-msg">12 nouvelles propriétés cette semaine</span>
+                            <span class="live-msg">Fidjrossè · Haie Vive · Porto-Novo</span>
+                        </div>
+                    </div>
+
+                    <!-- H1 — words will be split by JS for staggered reveal -->
+                    <h1 class="hero-h1 reveal delay-1">L'Excellence <br><span class="text-gold-gradient text-serif">Patrimoniale.</span></h1>
+
+                    <p class="reveal delay-2">Découvrez une sélection <span class="text-serif">exclusive</span> de propriétés d'exception au Bénin. Notre expertise transforme vos aspirations en réalités immobilières de prestige.</p>
+
+                    <!-- Property type pills -->
+                    <div class="hero-pills reveal delay-2">
+                        <button class="hero-pill active" data-fill="Villa">
+                            <i data-lucide="home"></i><span>Villa</span>
+                        </button>
+                        <button class="hero-pill" data-fill="Penthouse">
+                            <i data-lucide="building-2"></i><span>Penthouse</span>
+                        </button>
+                        <button class="hero-pill" data-fill="Appartement">
+                            <i data-lucide="layers"></i><span>Appt.</span>
+                        </button>
+                        <button class="hero-pill" data-fill="Bureau">
+                            <i data-lucide="briefcase"></i><span>Bureau</span>
+                        </button>
+                    </div>
+
+                    <!-- Search Widget -->
+                    <div class="hero-search-v3 reveal delay-3" id="heroSearch">
+                        <div class="search-main">
+                            <div class="search-field">
+                                <i data-lucide="home" class="sf-icon"></i>
+                                <div class="field-info">
+                                    <label>Type de bien</label>
+                                    <input type="text" id="searchTypeInput" placeholder="Villa, Penthouse...">
+                                </div>
+                            </div>
+                            <div class="search-field">
+                                <i data-lucide="navigation" class="sf-icon"></i>
+                                <div class="field-info">
+                                    <label>Localisation</label>
+                                    <input type="text" placeholder="Cotonou, Fidjrossè...">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="search-submit">
+                            <span>Découvrir</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Scroll cue -->
+                    <div class="hero-scroll-cue reveal delay-3">
+                        <div class="scroll-track">
+                            <div class="scroll-thumb"></div>
+                        </div>
+                        <span>Défiler</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-media reveal delay-2">
+                    <!-- Decorative elements behind the frame -->
+                    <div class="media-deco-ring"></div>
+                    <div class="media-deco-dots"></div>
+                    <div class="media-accent-line"></div>
+
+                    <div class="media-frame">
+                        <div class="image-parallax">
+                            <img src="luxury_villa_hero_wcp_1776874140007.png" alt="Architecture Immobilière de Luxe">
+                        </div>
+                        <div class="media-overlay"></div>
+
+                        <!-- Location badge — top of image -->
+                        <div class="media-location-badge">
+                            <span class="location-pulse"></span>
+                            <span>Fidjrossè, Cotonou</span>
+                        </div>
+
+                        <!-- Property meta strip — bottom of image -->
+                        <div class="media-meta-strip">
+                            <div class="meta-item">
+                                <i data-lucide="bed-double"></i>
+                                <span>6 Ch.</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="maximize-2"></i>
+                                <span>800 m²</span>
+                            </div>
+                            <div class="meta-item">
+                                <i data-lucide="waves"></i>
+                                <span>Vue Mer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Highlight Card — repositioned -->
+                    <div class="floating-highlight">
+                        <div class="highlight-label">Prix de vente</div>
+                        <div class="highlight-price">450.000.000 <span>FCFA</span></div>
+                        <div class="highlight-details">
+                            <span>Fidjrossè Resort</span>
+                            <div class="rating">
+                                <i data-lucide="star"></i>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-blob"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS STRIP -->
+        <section class="stats-strip">
+            <div class="stats-bg-glow"></div>
+            <div class="container">
+                <div class="stats-grid">
+
+                    <div class="stat-item reveal">
+                        <span class="stat-counter" data-target="100" data-suffix="%">0</span>
+                        <div class="stat-info">
+                            <p class="stat-label">Transparence Digitale</p>
+                            <span class="stat-sub">Toutes transactions auditées</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-item reveal delay-1">
+                        <span class="stat-counter" data-target="2800" data-format="k">0</span>
+                        <div class="stat-info">
+                            <p class="stat-label">Portefeuilles Actifs</p>
+                            <span class="stat-sub">Clients sur la plateforme</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-item reveal delay-2">
+                        <span class="stat-counter" data-target="150" data-suffix="+">0</span>
+                        <div class="stat-info">
+                            <p class="stat-label">Experts Certifiés</p>
+                            <span class="stat-sub">Agents immobiliers agréés</span>
+                        </div>
+                    </div>
+
+                    <div class="stat-item reveal delay-3">
+                        <span class="stat-fixed">$45M<em>+</em></span>
+                        <div class="stat-info">
+                            <p class="stat-label">Actifs sous Gestion</p>
+                            <span class="stat-sub">Volume total des transactions</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PORTFOLIO -->
+        <section class="featured-grid-section section-padding">
+            <div class="container">
+
+                <!-- Section Header -->
+                <div class="section-header reveal">
+                    <div class="sh-left">
+                        <span class="sh-eyebrow">Collection Exclusive</span>
+                        <h2>Notre Sélection <br><span class="text-serif">Biens d'Exception.</span></h2>
+                    </div>
+                    <div class="sh-right">
+                        <p>Une sélection rigoureuse des propriétés les plus prestigieuses du marché, auditées pour votre sérénité.</p>
+                        <a href="#" class="sh-cta">
+                            <span>Voir tout le catalogue</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="asymmetric-layout">
+                    <!-- Major Asset -->
+                    <div class="prop-hero-card reveal">
+                        <img src="modern_cottage_wcp_1776874851293.png" alt="Propriété Exclusive">
+
+                        <!-- Top row: badge + save -->
+                        <div class="prop-card-top">
+                            <span class="prop-badge">À l'Affiche</span>
+                            <button class="prop-save-btn" aria-label="Sauvegarder">
+                                <i data-lucide="heart"></i>
+                            </button>
+                        </div>
+
+                        <!-- Feature tags -->
+                        <div class="prop-feat-tags">
+                            <span class="prop-feat-tag"><i data-lucide="waves"></i> Vue Mer</span>
+                            <span class="prop-feat-tag"><i data-lucide="droplets"></i> Piscine</span>
+                            <span class="prop-feat-tag">800 m²</span>
+                        </div>
+
+                        <!-- Overlay -->
+                        <div class="prop-info-overlay">
+                            <div class="prop-overlay-header">
+                                <h3>L'Éclat du Littoral</h3>
+                                <p class="prop-location">
+                                    <i data-lucide="map-pin"></i>
+                                    Villa Contemporaine — Haie Vive, Cotonou
+                                </p>
+                            </div>
+                            <div class="prop-overlay-footer">
+                                <div class="prop-specs">
+                                    <span><i data-lucide="bed-double"></i> 5 Ch.</span>
+                                    <span><i data-lucide="maximize-2"></i> 800 m²</span>
+                                    <span><i data-lucide="car"></i> 2 Parking</span>
+                                </div>
+                                <div class="prop-price-row">
+                                    <div class="prop-price-block">
+                                        <span class="price-lbl">Prix de vente</span>
+                                        <span class="price-val">280.000.000 FCFA</span>
+                                    </div>
+                                    <a href="#" class="prop-discover-btn">
+                                        <span>Découvrir</span>
+                                        <i data-lucide="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Side Insights -->
+                    <div class="side-stack">
+
+                        <!-- Card 1 : Investissement -->
+                        <div class="mini-card invest-card reveal delay-1">
+                            <div class="mc-header">
+                                <div class="mc-icon-wrap">
+                                    <i data-lucide="trending-up"></i>
+                                </div>
+                                <span class="mc-badge">Performance</span>
+                            </div>
+                            <div class="mc-stat">
+                                <span class="mc-stat-num" data-target="12">0</span><span class="mc-stat-unit">%</span>
+                                <span class="mc-stat-label">Rentabilité nette / an</span>
+                            </div>
+                            <div class="mc-chart">
+                                <div class="mc-bar mc-bar-init" style="--h: 38%; --delay: 0s;"></div>
+                                <div class="mc-bar mc-bar-init" style="--h: 55%; --delay: 0.08s;"></div>
+                                <div class="mc-bar mc-bar-init" style="--h: 48%; --delay: 0.16s;"></div>
+                                <div class="mc-bar mc-bar-init" style="--h: 72%; --delay: 0.24s;"></div>
+                                <div class="mc-bar mc-bar-init" style="--h: 65%; --delay: 0.32s;"></div>
+                                <div class="mc-bar mc-bar-init active" style="--h: 100%; --delay: 0.4s;"></div>
+                            </div>
+                            <a href="#" class="mc-cta">
+                                <span>Analyses d'Investissement</span>
+                                <div class="mc-cta-arrow"><i data-lucide="arrow-right"></i></div>
+                            </a>
+                        </div>
+
+                        <!-- Card 2 : Vendre -->
+                        <div class="mini-card sell-card reveal delay-2">
+                            <div class="mc-header">
+                                <div class="mc-icon-wrap dark">
+                                    <i data-lucide="key"></i>
+                                </div>
+                                <span class="mc-badge dark">Vendeurs</span>
+                            </div>
+                            <div class="mc-stat dark">
+                                <span class="mc-stat-num dark" data-target="2500">0</span><span class="mc-stat-unit dark">+</span>
+                                <span class="mc-stat-label dark">Acquéreurs qualifiés</span>
+                            </div>
+                            <p class="mc-desc">Exposez votre propriété à notre réseau d'acheteurs premium et concluez au meilleur prix.</p>
+                            <a href="#" class="mc-cta dark">
+                                <span>Mettre en vente</span>
+                                <div class="mc-cta-arrow"><i data-lucide="arrow-right"></i></div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICE ECOSYSTEM -->
+        <section class="ecosystem-section section-padding">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <div class="sh-left">
+                        <span class="sh-eyebrow">Notre Écosystème</span>
+                        <h2>Conçu pour <br><span class="text-serif">vos ambitions.</span></h2>
+                    </div>
+                    <div class="sh-right">
+                        <p>Trois espaces dédiés, une seule plateforme. Chaque profil trouve son expérience sur mesure.</p>
+                    </div>
+                </div>
+
+                <div class="eco-grid">
+
+                    <!-- Locataire -->
+                    <div class="eco-card reveal">
+                        <span class="eco-num">01</span>
+                        <div class="eco-icon">
+                            <i data-lucide="home"></i>
+                        </div>
+                        <div class="eco-body">
+                            <h3>Espace Locataire</h3>
+                            <p>Une expérience de location fluide et entièrement dématérialisée pour votre confort.</p>
+                        </div>
+                        <ul class="check-list">
+                            <li>Paiement de loyer en un clic</li>
+                            <li>Maintenance assistée par IA</li>
+                            <li>Documents légaux sécurisés</li>
+                        </ul>
+                        <a href="#" class="eco-cta">
+                            <span>Accéder à l'espace</span>
+                            <div class="eco-cta-arrow"><i data-lucide="arrow-right"></i></div>
+                        </a>
+                    </div>
+
+                    <!-- Propriétaire — Featured -->
+                    <div class="eco-card eco-featured reveal delay-1">
+                        <span class="eco-num">02</span>
+                        <div class="eco-icon">
+                            <i data-lucide="key"></i>
+                        </div>
+                        <div class="eco-body">
+                            <h3>Espace Propriétaire</h3>
+                            <p>Déléguez la gestion de vos actifs et maximisez vos rendements sans les contraintes.</p>
+                        </div>
+                        <ul class="check-list">
+                            <li>Hub de revenus en temps réel</li>
+                            <li>Sélection locative rigoureuse</li>
+                            <li>Rapports financiers mensuels</li>
+                        </ul>
+                        <a href="#" class="eco-cta">
+                            <span>Accéder à l'espace</span>
+                            <div class="eco-cta-arrow"><i data-lucide="arrow-right"></i></div>
+                        </a>
+                    </div>
+
+                    <!-- Acheteur -->
+                    <div class="eco-card reveal delay-2">
+                        <span class="eco-num">03</span>
+                        <div class="eco-icon">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <div class="eco-body">
+                            <h3>Espace Acheteur</h3>
+                            <p>Accédez aux meilleures opportunités immobilières du marché béninois.</p>
+                        </div>
+                        <ul class="check-list">
+                            <li>Offres Off-Market exclusives</li>
+                            <li>Conseil juridique et fiscal</li>
+                            <li>Visites immersives 3D</li>
+                        </ul>
+                        <a href="#" class="eco-cta">
+                            <span>Accéder à l'espace</span>
+                            <div class="eco-cta-arrow"><i data-lucide="arrow-right"></i></div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WEALTH JOURNEY -->
+        <section class="process-section section-padding">
+            <div class="container">
+
+                <div class="process-header reveal">
+                    <span class="sh-eyebrow">Simple & Sécurisé</span>
+                    <h2>Votre Parcours <span class="text-serif">en 4 étapes.</span></h2>
+                </div>
+
+                <div class="process-timeline" id="processTimeline">
+
+                    <!-- Connector line -->
+                    <div class="timeline-track">
+                        <div class="timeline-fill" id="timelineFill"></div>
+                    </div>
+
+                    <div class="step-card reveal" data-step="0">
+                        <div class="step-circle">
+                            <i data-lucide="compass"></i>
+                        </div>
+                        <div class="step-body">
+                            <span class="step-idx">01</span>
+                            <h4>Stratégie</h4>
+                            <p>Définissez vos objectifs patrimoniaux en 2 minutes via notre plateforme intelligente.</p>
+                            <span class="step-tag"><i data-lucide="clock"></i> ~2 min.</span>
+                        </div>
+                    </div>
+
+                    <div class="step-card reveal delay-1" data-step="1">
+                        <div class="step-circle">
+                            <i data-lucide="sliders-horizontal"></i>
+                        </div>
+                        <div class="step-body">
+                            <span class="step-idx">02</span>
+                            <h4>Curation</h4>
+                            <p>Nous sélectionnons les biens qui correspondent précisément à votre vision et budget.</p>
+                            <span class="step-tag"><i data-lucide="sparkles"></i> Sur mesure</span>
+                        </div>
+                    </div>
+
+                    <div class="step-card reveal delay-2" data-step="2">
+                        <div class="step-circle">
+                            <i data-lucide="pen-line"></i>
+                        </div>
+                        <div class="step-body">
+                            <span class="step-idx">03</span>
+                            <h4>Signature</h4>
+                            <p>Concluez vos accords de manière cryptée et certifiée, où que vous soyez.</p>
+                            <span class="step-tag"><i data-lucide="shield-check"></i> 100% sécurisé</span>
+                        </div>
+                    </div>
+
+                    <div class="step-card reveal delay-3" data-step="3">
+                        <div class="step-circle">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <div class="step-body">
+                            <span class="step-idx">04</span>
+                            <h4>Expansion</h4>
+                            <p>Suivez la croissance de votre portefeuille grâce à nos outils d'analyse temps réel.</p>
+                            <span class="step-tag"><i data-lucide="trending-up"></i> Dashboard live</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GLOBAL COMMUNITY -->
+        <section class="testimonials-section section-padding">
+            <div class="testi-bg-glow"></div>
+            <div class="container">
+
+                <!-- Header -->
+                <div class="testi-header reveal">
+                    <div class="testi-header-left">
+                        <span class="sh-eyebrow testi-eyebrow">Ils nous font confiance</span>
+                        <h2>Ce que disent <br><span class="text-serif">nos clients.</span></h2>
+                    </div>
+                    <div class="testi-global-rating reveal delay-1">
+                        <div class="tgr-stars">★★★★★</div>
+                        <div class="tgr-info">
+                            <span class="tgr-score">4.9</span>
+                            <span class="tgr-count">+200 avis vérifiés</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards -->
+                <div class="testi-grid">
+
+                    <div class="testi-card reveal delay-1">
+                        <div class="testi-card-top">
+                            <div class="tc-stars">★★★★★</div>
+                            <span class="tc-verified"><i data-lucide="badge-check"></i> Vérifié</span>
+                        </div>
+                        <span class="tc-quote-mark">"</span>
+                        <p>WestCoast a révolutionné ma gestion locative. Je gagne un temps précieux sur chaque transaction.</p>
+                        <div class="testi-user">
+                            <div class="testi-avatar ta-gold">FA</div>
+                            <div class="testi-meta">
+                                <h5>Ferdinand Akoffodji</h5>
+                                <span>Multi-Propriétaire</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card testi-featured reveal delay-2">
+                        <div class="testi-card-top">
+                            <div class="tc-stars">★★★★★</div>
+                            <span class="tc-verified"><i data-lucide="badge-check"></i> Vérifié</span>
+                        </div>
+                        <span class="tc-quote-mark">"</span>
+                        <p>Le niveau de professionnalisme est inégalé au Bénin. Une véritable agence de prestige digitale.</p>
+                        <div class="testi-user">
+                            <div class="testi-avatar ta-blue">SM</div>
+                            <div class="testi-meta">
+                                <h5>Sophie Migan</h5>
+                                <span>Cadre Executive</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card reveal delay-3">
+                        <div class="testi-card-top">
+                            <div class="tc-stars">★★★★★</div>
+                            <span class="tc-verified"><i data-lucide="badge-check"></i> Vérifié</span>
+                        </div>
+                        <span class="tc-quote-mark">"</span>
+                        <p>L'outil indispensable pour piloter mes investissements au pays depuis l'étranger.</p>
+                        <div class="testi-user">
+                            <div class="testi-avatar ta-green">MK</div>
+                            <div class="testi-meta">
+                                <h5>Marc K.</h5>
+                                <span>Investisseur Diaspora</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="final-cta">
+            <div class="cta-glow"></div>
+            <div class="container">
+                <div class="cta-inner reveal">
+                    <span class="sh-eyebrow">Commencer maintenant</span>
+                    <h2>Prêt à élever vos <br><span class="text-serif">Ambitions ?</span></h2>
+                    <p class="cta-sub">Rejoignez 2 800+ investisseurs et propriétaires qui font déjà confiance à WestCoast Property.</p>
+                    <div class="cta-actions">
+                        <a href="#" class="btn-primary cta-btn-main">
+                            <span>Créer mon compte</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a href="#" class="cta-btn-ghost">
+                            <i data-lucide="phone"></i>
+                            <span>Parler à un expert</span>
+                        </a>
+                    </div>
+                    <div class="cta-proof">
+                        <div class="avatar-group">
+                            <div class="mini-avatar"></div>
+                            <div class="mini-avatar"></div>
+                            <div class="mini-avatar"></div>
+                        </div>
+                        <span>Inscription gratuite · Sans engagement</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+
+                <div class="f-brand">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">W</div>
+                        <span class="logo-text">WestCoast</span>
+                    </a>
+                    <p>Façonner l'avenir de la gestion immobilière en Afrique de l'Ouest par l'innovation et la confiance.</p>
+                    <div class="f-newsletter">
+                        <span class="f-nl-label">Alertes propriétés</span>
+                        <div class="f-nl-row">
+                            <input type="email" placeholder="votre@email.com">
+                            <button type="submit" aria-label="S'abonner">
+                                <i data-lucide="arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-col">
+                    <h4>Plateforme</h4>
+                    <ul>
+                        <li><a href="#">Catalogue</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Sécurité</a></li>
+                        <li><a href="#">Tarification</a></li>
+                    </ul>
+                </div>
+
+                <div class="f-col">
+                    <h4>Ressources</h4>
+                    <ul>
+                        <li><a href="#">Mentions Légales</a></li>
+                        <li><a href="#">Guide d'Investissement</a></li>
+                        <li><a href="#">Actualités</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="f-col">
+                    <h4>Contact</h4>
+                    <div class="f-contact">
+                        <a href="mailto:contact@westcoast.bj" class="f-contact-link">
+                            <i data-lucide="mail"></i>
+                            contact@westcoast.bj
+                        </a>
+                        <a href="tel:+22997000000" class="f-contact-link">
+                            <i data-lucide="phone"></i>
+                            +229 97 00 00 00
+                        </a>
+                    </div>
+                    <div class="f-col-sep"></div>
+                    <h4>Réseaux</h4>
+                    <div class="f-social">
+                        <a href="#" class="f-social-link" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="#" class="f-social-link" aria-label="Instagram">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                        <a href="#" class="f-social-link fsl-x" aria-label="X / Twitter">
+                            𝕏
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 WestCoast Property — Cotonou, Bénin</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+</body>
+</html>
