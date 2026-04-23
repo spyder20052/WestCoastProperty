@@ -128,26 +128,25 @@ h4 { font-size: var(--fs-h4); }
     color: var(--primary);
 }
 
-.logo-icon {
-    width: 34px;
-    height: 34px;
-    background: var(--primary);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    font-weight: 900;
-    font-size: 1rem;
-    transition: transform 0.3s;
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Clean up any white residue on light backgrounds */
+    mix-blend-mode: multiply;
 }
-.logo:hover .logo-icon { transform: rotate(-5deg) scale(1.05); }
 
-.logo-text {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: -0.04em;
+.logo:hover .logo-img {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.footer-logo {
+    height: 72px;
+    /* Invert for visibility on dark footer background */
+    filter: brightness(0) invert(1);
+    mix-blend-mode: normal;
+    opacity: 0.85;
 }
 
 /* Nav Links */
