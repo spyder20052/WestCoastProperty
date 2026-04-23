@@ -129,24 +129,19 @@ h4 { font-size: var(--fs-h4); }
 }
 
 .logo-img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    /* Clean up any white residue on light backgrounds */
-    mix-blend-mode: multiply;
+    height: auto;
+    width: 200px;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
 .logo:hover .logo-img {
-    transform: translateY(-2px) scale(1.05);
+    transform: scale(1.03);
 }
 
 .footer-logo {
-    height: 72px;
-    /* Invert for visibility on dark footer background */
-    filter: brightness(0) invert(1);
-    mix-blend-mode: normal;
-    opacity: 0.85;
+    width: 240px;
+    margin-bottom: 0.5rem;
 }
 
 /* Nav Links */
@@ -1219,6 +1214,22 @@ h4 { font-size: var(--fs-h4); }
 }
 .prop-hero-card:hover {
     box-shadow: 0 40px 80px -20px rgba(10, 15, 27, 0.22);
+}
+
+.prop-hero-card .logo-img {
+    height: auto;
+    width: 180px;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.logo:hover .logo-img {
+    transform: scale(1.03);
+}
+
+.footer-logo {
+    width: 220px;
+    margin-bottom: 1.5rem;
 }
 
 .prop-hero-card img {
