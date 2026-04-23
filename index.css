@@ -8,19 +8,19 @@
 
 :root {
     /* Colors */
-    --primary: #0A0F1B;
-    --accent: #2563EB;
-    --accent-alt: #0EA5E9;
-    --accent-gold: #B59449;
-    --bg-body: #F9F7F2;
+    --primary: #0D2B22;
+    --accent: #7A8D84;
+    --accent-alt: #0D2B22;
+    --accent-gold: #7A8D84;
+    --bg-body: #F4F1EB;
     --bg-white: #FFFFFF;
-    --bg-dark: #07090F;
+    --bg-dark: #05080E;
 
-    --text-main: #1A1D23;
-    --text-muted: #64748B;
-    --text-on-dark: #F1F5F9;
+    --text-main: #05080E;
+    --text-muted: #596372;
+    --text-on-dark: #F4F1EB;
 
-    --border: rgba(10, 15, 27, 0.08);
+    --border: rgba(13, 43, 34, 0.08);
     --border-light: rgba(255, 255, 255, 0.1);
     
     /* Layout */
