@@ -8,10 +8,10 @@
 
 :root {
     /* Colors */
-    --primary: #0D2B22;
-    --accent: #7A8D84;
-    --accent-alt: #0D2B22;
-    --accent-gold: #7A8D84;
+    --primary: #0D2B22;   /* Obsidian Green */
+    --accent: #3A5A40;    /* Hunter Green - Plus représentatif du luxe moderne */
+    --accent-alt: #588157; /* Lighter Sage */
+    --accent-gold: var(--accent);
     --bg-body: #F4F1EB;
     --bg-white: #FFFFFF;
     --bg-dark: #05080E;
@@ -299,8 +299,15 @@ h4 { font-size: var(--fs-h4); }
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     display: inline-flex;
     align-items: center;
+    border: 1px solid transparent;
 }
-.btn-primary:hover { background: var(--accent-gold); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(181,148,73,0.35); }
+.btn-primary:hover { 
+    background: white; 
+    color: var(--primary);
+    transform: translateY(-2px); 
+    box-shadow: 0 12px 32px rgba(13, 43, 34, 0.12); 
+    border: 1px solid var(--primary);
+}
 
 .nav-cta { gap: 8px; }
 .nav-cta i { width: 14px; height: 14px; transition: transform 0.3s; }
@@ -429,8 +436,8 @@ h4 { font-size: var(--fs-h4); }
     padding-top: 80px;
     position: relative;
     overflow: hidden;
-    background: radial-gradient(circle at 10% 20%, rgba(181, 148, 73, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(37, 99, 235, 0.03) 0%, transparent 40%);
+    background: radial-gradient(circle at 10% 20%, rgba(58, 90, 64, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(13, 43, 34, 0.03) 0%, transparent 40%);
 }
 
 .hero-inner-container {
@@ -570,18 +577,9 @@ h4 { font-size: var(--fs-h4); }
 
 /* Gold serif span (Patrimoniale.) — subtle shimmer loop */
 .text-gold-gradient {
-    background: linear-gradient(
-        90deg,
-        var(--accent-gold) 0%,
-        #D4AF72 40%,
-        var(--accent-gold) 60%,
-        #C9A55A 100%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gold-shimmer 4s linear infinite;
+    color: var(--accent);
+    -webkit-text-fill-color: initial;
+    background: none;
 }
 @keyframes gold-shimmer {
     0%   { background-position: 0% center; }
@@ -661,9 +659,9 @@ h4 { font-size: var(--fs-h4); }
     transition: box-shadow 0.4s ease, border-color 0.4s ease;
 }
 .hero-search-v3:focus-within {
-    border-color: rgba(181, 148, 73, 0.35);
+    border-color: rgba(58, 90, 64, 0.35);
     box-shadow: 0 30px 60px -15px rgba(10, 15, 27, 0.12),
-                0 0 0 3px rgba(181, 148, 73, 0.08);
+                0 0 0 3px rgba(58, 90, 64, 0.08);
 }
 
 .search-field:focus-within .sf-icon {
@@ -814,7 +812,7 @@ h4 { font-size: var(--fs-h4); }
     width: 75%;
     height: 75%;
     border-radius: 56px;
-    border: 1.5px solid rgba(181, 148, 73, 0.18);
+    border: 1.5px solid rgba(58, 90, 64, 0.18);
     z-index: 0;
     pointer-events: none;
 }
@@ -826,7 +824,7 @@ h4 { font-size: var(--fs-h4); }
     left: 0;
     width: 120px;
     height: 120px;
-    background-image: radial-gradient(circle, rgba(181, 148, 73, 0.3) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(circle, rgba(58, 90, 64, 0.3) 1.5px, transparent 1.5px);
     background-size: 16px 16px;
     z-index: 0;
     pointer-events: none;
@@ -1870,11 +1868,11 @@ h4 { font-size: var(--fs-h4); }
 .step-circle i { width: 24px; height: 24px; }
 
 .step-card:hover .step-circle {
-    border-color: var(--accent-gold);
-    background: var(--accent-gold);
+    border-color: var(--accent);
+    background: var(--accent);
     color: white;
     transform: scale(1.1);
-    box-shadow: 0 0 0 6px var(--bg-white), 0 12px 32px rgba(181,148,73,0.3);
+    box-shadow: 0 0 0 6px var(--bg-white), 0 12px 32px rgba(58, 90, 64, 0.2);
 }
 
 /* Step body */
@@ -1956,7 +1954,7 @@ h4 { font-size: var(--fs-h4); }
     inset: 0;
     background:
         radial-gradient(ellipse at 10% 50%, rgba(181,148,73,0.06) 0%, transparent 55%),
-        radial-gradient(ellipse at 90% 20%, rgba(37,99,235,0.05) 0%, transparent 50%);
+        radial-gradient(ellipse at 90% 20%, rgba(13,43,34,0.05) 0%, transparent 50%);
     pointer-events: none;
 }
 
@@ -2141,7 +2139,7 @@ h4 { font-size: var(--fs-h4); }
     inset: 0;
     background:
         radial-gradient(ellipse at 50% 60%, rgba(181,148,73,0.1) 0%, transparent 60%),
-        radial-gradient(ellipse at 20% 30%, rgba(37,99,235,0.04) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 30%, rgba(13,43,34,0.04) 0%, transparent 50%);
     pointer-events: none;
 }
 
